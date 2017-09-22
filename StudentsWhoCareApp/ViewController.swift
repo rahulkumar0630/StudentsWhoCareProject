@@ -10,9 +10,13 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet var SchedulePickup: UIView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        SchedulePickup.layer.cornerRadius = 10
+        SchedulePickup.layer.borderWidth = 4
+        SchedulePickup.layer.borderColor = UIColor.orange.cgColor
+        
     }
 
     override func didReceiveMemoryWarning() {

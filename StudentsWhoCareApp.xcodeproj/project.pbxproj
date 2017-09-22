@@ -14,6 +14,12 @@
 		E401092A1F71C9980054E9E6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E40109281F71C9980054E9E6 /* LaunchScreen.storyboard */; };
 		E40109351F71C9980054E9E6 /* StudentsWhoCareAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E40109341F71C9980054E9E6 /* StudentsWhoCareAppTests.swift */; };
 		E40109401F71C9980054E9E6 /* StudentsWhoCareAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E401093F1F71C9980054E9E6 /* StudentsWhoCareAppUITests.swift */; };
+		E401094E1F71CB6A0054E9E6 /* FadingBlueBack.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = E401094D1F71CB6A0054E9E6 /* FadingBlueBack.jpeg */; };
+		E431FA491F74AF9200C19574 /* BlueCircle.png in Resources */ = {isa = PBXBuildFile; fileRef = E431FA481F74AF9200C19574 /* BlueCircle.png */; };
+		E431FA4B1F74B01800C19574 /* T-Shirt.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E431FA4A1F74B01800C19574 /* T-Shirt.jpg */; };
+		E431FA4D1F74B20C00C19574 /* CurvedBar.png in Resources */ = {isa = PBXBuildFile; fileRef = E431FA4C1F74B20C00C19574 /* CurvedBar.png */; };
+		E431FA511F74B55000C19574 /* BlueCircleOutline.png in Resources */ = {isa = PBXBuildFile; fileRef = E431FA501F74B55000C19574 /* BlueCircleOutline.png */; };
+		E431FA531F74B69900C19574 /* AdminLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = E431FA521F74B69900C19574 /* AdminLogo.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +53,12 @@
 		E401093B1F71C9980054E9E6 /* StudentsWhoCareAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StudentsWhoCareAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E401093F1F71C9980054E9E6 /* StudentsWhoCareAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentsWhoCareAppUITests.swift; sourceTree = "<group>"; };
 		E40109411F71C9980054E9E6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E401094D1F71CB6A0054E9E6 /* FadingBlueBack.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = FadingBlueBack.jpeg; path = ../../../../../Downloads/FadingBlueBack.jpeg; sourceTree = "<group>"; };
+		E431FA481F74AF9200C19574 /* BlueCircle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = BlueCircle.png; path = ../../../../../Downloads/BlueCircle.png; sourceTree = "<group>"; };
+		E431FA4A1F74B01800C19574 /* T-Shirt.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "T-Shirt.jpg"; path = "../../../../../Downloads/T-Shirt.jpg"; sourceTree = "<group>"; };
+		E431FA4C1F74B20C00C19574 /* CurvedBar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = CurvedBar.png; path = ../../../../../Downloads/CurvedBar.png; sourceTree = "<group>"; };
+		E431FA501F74B55000C19574 /* BlueCircleOutline.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = BlueCircleOutline.png; path = ../../../../../Downloads/BlueCircleOutline.png; sourceTree = "<group>"; };
+		E431FA521F74B69900C19574 /* AdminLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = AdminLogo.png; path = ../../../../../Downloads/AdminLogo.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +115,12 @@
 				E40109261F71C9980054E9E6 /* Assets.xcassets */,
 				E40109281F71C9980054E9E6 /* LaunchScreen.storyboard */,
 				E401092B1F71C9980054E9E6 /* Info.plist */,
+				E401094D1F71CB6A0054E9E6 /* FadingBlueBack.jpeg */,
+				E431FA481F74AF9200C19574 /* BlueCircle.png */,
+				E431FA4C1F74B20C00C19574 /* CurvedBar.png */,
+				E431FA4A1F74B01800C19574 /* T-Shirt.jpg */,
+				E431FA521F74B69900C19574 /* AdminLogo.png */,
+				E431FA501F74B55000C19574 /* BlueCircleOutline.png */,
 			);
 			path = StudentsWhoCareApp;
 			sourceTree = "<group>";
@@ -235,8 +253,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E431FA531F74B69900C19574 /* AdminLogo.png in Resources */,
 				E401092A1F71C9980054E9E6 /* LaunchScreen.storyboard in Resources */,
+				E401094E1F71CB6A0054E9E6 /* FadingBlueBack.jpeg in Resources */,
+				E431FA511F74B55000C19574 /* BlueCircleOutline.png in Resources */,
 				E40109271F71C9980054E9E6 /* Assets.xcassets in Resources */,
+				E431FA4B1F74B01800C19574 /* T-Shirt.jpg in Resources */,
+				E431FA4D1F74B20C00C19574 /* CurvedBar.png in Resources */,
+				E431FA491F74AF9200C19574 /* BlueCircle.png in Resources */,
 				E40109251F71C9980054E9E6 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -514,6 +538,7 @@
 				E40109461F71C9980054E9E6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E40109471F71C9980054E9E6 /* Build configuration list for PBXNativeTarget "StudentsWhoCareAppTests" */ = {
 			isa = XCConfigurationList;
@@ -522,6 +547,7 @@
 				E40109491F71C9980054E9E6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E401094A1F71C9980054E9E6 /* Build configuration list for PBXNativeTarget "StudentsWhoCareAppUITests" */ = {
 			isa = XCConfigurationList;
@@ -530,6 +556,7 @@
 				E401094C1F71C9980054E9E6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
