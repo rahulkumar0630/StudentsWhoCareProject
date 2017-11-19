@@ -1,0 +1,6 @@
+framework module Pods_StudentsWhoCareAppUITests {
+  umbrella header "Pods-StudentsWhoCareAppUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
