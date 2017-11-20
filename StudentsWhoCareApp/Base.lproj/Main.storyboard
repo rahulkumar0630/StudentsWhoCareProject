@@ -58,7 +58,8 @@
                         <color key="backgroundColor" red="0.92158538103103638" green="0.92156803607940674" blue="0.92157983779907227" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </view>
                     <toolbarItems>
-                        <barButtonItem width="312" style="plain" systemItem="fixedSpace" id="egt-S3-FWF"/>
+                        <barButtonItem title="Your Orders" id="Ovr-R0-3Qh"/>
+                        <barButtonItem width="312" style="plain" id="egt-S3-FWF"/>
                         <barButtonItem title="Admin Console" id="qxE-rA-qaZ">
                             <connections>
                                 <action selector="OnAdminConsoleClick:" destination="BYZ-38-t0r" id="9iX-W9-frd"/>

@@ -35,6 +35,15 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     @IBAction func OnAdminConsoleClick(_ sender: Any) {
+        let Key = UserDefaults.standard.object(forKey: "Admin Access:") as? Bool
+        
+        if(Key != nil)
+        {
+            self.performSegue(withIdentifier: "SegueToAdminConsole", sender: self)
+        }
+        else
+        {
+        
         let alertControllerForAccess = UIAlertController(title: "Restricted Access!", message: "Please enter the password to enter Orders DB", preferredStyle: UIAlertControllerStyle.alert)
         
         var tField: UITextField!
@@ -43,7 +52,9 @@ class ViewController: UIViewController {
         {
             print("generating the TextField")
             textField.placeholder = "Enter Password"
+            textField.isSecureTextEntry = true
             tField = textField
+            
         }
         
         let cancelAction = UIAlertAction(title: "Cancel", style: .cancel) { (action) in
@@ -65,6 +76,7 @@ class ViewController: UIViewController {
             else
             {
                 print("ran")
+                UserDefaults.standard.set(true, forKey: "Admin Access:")
                 alertControllerForAccess.dismiss(animated: false, completion: nil)
                 self.performSegue(withIdentifier: "SegueToAdminConsole", sender: self)
             }
@@ -76,6 +88,7 @@ class ViewController: UIViewController {
         
         
         self.present(alertControllerForAccess, animated: true, completion: nil)
+        }
     }
     
     @IBAction func OnSchedulePickupPress(_ sender: Any) {
