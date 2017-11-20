@@ -58,11 +58,7 @@
                         <color key="backgroundColor" red="0.92158538103103638" green="0.92156803607940674" blue="0.92157983779907227" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </view>
                     <toolbarItems>
-                        <barButtonItem width="312" style="plain" systemItem="fixedSpace" id="egt-S3-FWF">
-                            <connections>
-                                <segue destination="qZw-tP-IxB" kind="show" identifier="SegueToAdminConsole" id="sS7-yi-8GG"/>
-                            </connections>
-                        </barButtonItem>
+                        <barButtonItem width="312" style="plain" systemItem="fixedSpace" id="egt-S3-FWF"/>
                         <barButtonItem title="Admin Console" id="qxE-rA-qaZ">
                             <connections>
                                 <action selector="OnAdminConsoleClick:" destination="BYZ-38-t0r" id="9iX-W9-frd"/>
@@ -75,6 +71,7 @@
                         <outlet property="DatePicker" destination="08d-12-6Dn" id="TDh-Lf-2XU"/>
                         <outlet property="SchedulePickup" destination="982-1p-ZO7" id="tOy-yD-tiY"/>
                         <segue destination="zFU-Wr-x71" kind="show" identifier="SegueToShippingInfo" id="kKx-ou-GZM"/>
+                        <segue destination="Vki-un-xwM" kind="push" identifier="SegueToAdminConsole" id="AKL-ue-g6C"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -279,6 +276,7 @@
                         <outlet property="PhoneNumberTextField" destination="0XH-TM-exh" id="YSk-cw-T6R"/>
                         <outlet property="StateTextField" destination="oBN-UY-IW0" id="ZQ4-Id-USB"/>
                         <outlet property="ZipCodeTextField" destination="LYW-Un-VNx" id="CUq-Or-Xwq"/>
+                        <segue destination="BYZ-38-t0r" kind="push" identifier="SegueBack" id="Jb0-Ij-7IU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zsh-An-Pov" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -286,33 +284,43 @@
             <point key="canvasLocation" x="1020" y="138.98050974512745"/>
         </scene>
         <!--Admin Console-->
-        <scene sceneID="Uk2-wC-CAe">
+        <scene sceneID="Fzu-1W-ZJB">
             <objects>
-                <viewController id="qZw-tP-IxB" customClass="ViewControllerForAdminPanel" customModule="StudentsWhoCareApp" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="1FO-9B-xOM"/>
-                        <viewControllerLayoutGuide type="bottom" id="4ed-04-aQU"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="5gn-TW-h6I">
+                <tableViewController id="Vki-un-xwM" customClass="ViewControllerForAdminPanel" customModule="StudentsWhoCareApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="mYI-cd-eD9">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="QR5-LS-3fB">
-                                <rect key="frame" x="0.0" y="64" width="375" height="559"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </mapView>
-                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <navigationItem key="navigationItem" title="Admin Console" id="077-k0-IGT"/>
-                    <connections>
-                        <outlet property="MapForAdmin" destination="QR5-LS-3fB" id="MO5-h0-KPW"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="5s0-d9-z9H" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="jvm-Zz-zKv">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="jvm-Zz-zKv" id="Phn-NL-gzm">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="Vki-un-xwM" id="Czu-Qj-8QQ"/>
+                            <outlet property="delegate" destination="Vki-un-xwM" id="iWz-Im-nSG"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Admin Console" id="hJk-2b-AZW">
+                        <barButtonItem key="rightBarButtonItem" title="Reload" id="2zZ-hA-lVo">
+                            <connections>
+                                <action selector="ReloadData:" destination="Vki-un-xwM" id="sgq-zR-cEi"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pg4-Vp-Xsg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1020" y="909.89505247376314"/>
+            <point key="canvasLocation" x="1132" y="870.31484257871068"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="mWO-4F-wDw"/>
+    </inferredMetricsTieBreakers>
     <color key="tintColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
 </document>

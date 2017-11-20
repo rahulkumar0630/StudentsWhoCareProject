@@ -23,6 +23,8 @@ class ViewController: UIViewController {
         SchedulePickup.layer.cornerRadius = 10
         SchedulePickup.layer.borderWidth = 4
         SchedulePickup.layer.borderColor = UIColor.orange.cgColor
+        
+        
 
         
     }
@@ -104,7 +106,18 @@ class ViewController: UIViewController {
         
         
         ViewController.sendData(Name: Name, Date: dateString, Address1: Address1, Address2: Address2, City: City, ZipCode: ZipCode, PhoneNumber: PhoneNumber, Country: Country, State: State)
+            presentThanksController()
         }
+    }
+    
+    func presentThanksController()
+    {
+        let ThanksController = UIAlertController(title: "Thanks!", message: "Your Pick-Up has been recorded", preferredStyle: UIAlertControllerStyle.alert)
+        let cancelAction = UIAlertAction(title: "Ok", style: .cancel) { (action) in
+            ThanksController.dismiss(animated: false, completion: nil)
+        }
+        ThanksController.addAction(cancelAction)
+        present(ThanksController, animated: true, completion: nil)
     }
         
     
@@ -117,6 +130,7 @@ class ViewController: UIViewController {
         var UIDandName = "\(Name): \(UID)"
         
         let post = [
+            "Name": Name,
             "Date": Date,
             "Address1":   Address1,
             "Address2":   Address2,

@@ -153,6 +153,18 @@ class ViewControllerForShippingInfo: UIViewController, UITextFieldDelegate{
         }
     }
     
+    func presentThanksController()
+    {
+        let ThanksController = UIAlertController(title: "Thanks!", message: "Your Pick-Up has been recorded", preferredStyle: UIAlertControllerStyle.alert)
+        let cancelAction = UIAlertAction(title: "Ok", style: .cancel) { (action) in
+            ThanksController.dismiss(animated: false, completion: nil)
+            self.navigationController?.popToRootViewController(animated: true)
+
+        }
+        ThanksController.addAction(cancelAction)
+        present(ThanksController, animated: true, completion: nil)
+    }
+    
     func runCheck()
     {
         
@@ -256,9 +268,10 @@ class ViewControllerForShippingInfo: UIViewController, UITextFieldDelegate{
             
             
             ViewController.sendData(Name: Name, Date: dateString, Address1: Address1, Address2: Address2, City: City, ZipCode: ZipCode, PhoneNumber: PhoneNumber, Country: Country, State: State)
-            
+            presentThanksController()
         }
     }
+    
     
     @IBAction func OnContinuePress(_ sender: Any) {
         runCheck()

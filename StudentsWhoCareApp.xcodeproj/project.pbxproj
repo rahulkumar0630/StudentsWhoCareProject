@@ -20,6 +20,7 @@
 		E401094E1F71CB6A0054E9E6 /* FadingBlueBack.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = E401094D1F71CB6A0054E9E6 /* FadingBlueBack.jpeg */; };
 		E42D303C1FC2174E0085EC02 /* ViewControllerForAdminPanel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E42D303B1FC2174E0085EC02 /* ViewControllerForAdminPanel.swift */; };
 		E42D303E1FC21BBC0085EC02 /* Capital.swift in Sources */ = {isa = PBXBuildFile; fileRef = E42D303D1FC21BBC0085EC02 /* Capital.swift */; };
+		E42D30401FC2803E0085EC02 /* VideoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E42D303F1FC2803E0085EC02 /* VideoCell.swift */; };
 		E431FA491F74AF9200C19574 /* BlueCircle.png in Resources */ = {isa = PBXBuildFile; fileRef = E431FA481F74AF9200C19574 /* BlueCircle.png */; };
 		E431FA4B1F74B01800C19574 /* T-Shirt.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E431FA4A1F74B01800C19574 /* T-Shirt.jpg */; };
 		E431FA4D1F74B20C00C19574 /* CurvedBar.png in Resources */ = {isa = PBXBuildFile; fileRef = E431FA4C1F74B20C00C19574 /* CurvedBar.png */; };
@@ -29,6 +30,7 @@
 		E431FA561F75B98E00C19574 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E431FA541F75B8D300C19574 /* GoogleService-Info.plist */; };
 		E431FA571F75B98E00C19574 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E431FA541F75B8D300C19574 /* GoogleService-Info.plist */; };
 		E431FA591F75C26200C19574 /* ViewControllerForShippingInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = E431FA581F75C26200C19574 /* ViewControllerForShippingInfo.swift */; };
+		E455E29C1FC34FEF00C8A204 /* reloadbutton.png in Resources */ = {isa = PBXBuildFile; fileRef = E455E29B1FC34FEE00C8A204 /* reloadbutton.png */; };
 		E49E47ED1FAE433E00A3B411 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E49E47EC1FAE433E00A3B411 /* UIView.swift */; };
 /* End PBXBuildFile section */
 
@@ -73,6 +75,7 @@
 		E401094D1F71CB6A0054E9E6 /* FadingBlueBack.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = FadingBlueBack.jpeg; path = ../../../../../Downloads/FadingBlueBack.jpeg; sourceTree = "<group>"; };
 		E42D303B1FC2174E0085EC02 /* ViewControllerForAdminPanel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerForAdminPanel.swift; sourceTree = "<group>"; };
 		E42D303D1FC21BBC0085EC02 /* Capital.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Capital.swift; sourceTree = "<group>"; };
+		E42D303F1FC2803E0085EC02 /* VideoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = VideoCell.swift; path = ../../../../../Downloads/VideoCell.swift; sourceTree = "<group>"; };
 		E431FA481F74AF9200C19574 /* BlueCircle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = BlueCircle.png; path = ../../../../../Downloads/BlueCircle.png; sourceTree = "<group>"; };
 		E431FA4A1F74B01800C19574 /* T-Shirt.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "T-Shirt.jpg"; path = "../../../../../Downloads/T-Shirt.jpg"; sourceTree = "<group>"; };
 		E431FA4C1F74B20C00C19574 /* CurvedBar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = CurvedBar.png; path = ../../../../../Downloads/CurvedBar.png; sourceTree = "<group>"; };
@@ -80,6 +83,7 @@
 		E431FA521F74B69900C19574 /* AdminLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = AdminLogo.png; path = ../../../../../Downloads/AdminLogo.png; sourceTree = "<group>"; };
 		E431FA541F75B8D300C19574 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		E431FA581F75C26200C19574 /* ViewControllerForShippingInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerForShippingInfo.swift; sourceTree = "<group>"; };
+		E455E29B1FC34FEE00C8A204 /* reloadbutton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = reloadbutton.png; path = ../../../../../Downloads/reloadbutton.png; sourceTree = "<group>"; };
 		E49E47EC1FAE433E00A3B411 /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 		E80A3644AB15AC53DB08B04E /* Pods-StudentsWhoCareApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StudentsWhoCareApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-StudentsWhoCareApp/Pods-StudentsWhoCareApp.release.xcconfig"; sourceTree = "<group>"; };
 		F44F828AC91B6AB1F5804C44 /* Pods_StudentsWhoCareAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StudentsWhoCareAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -165,9 +169,11 @@
 				E431FA4A1F74B01800C19574 /* T-Shirt.jpg */,
 				E431FA521F74B69900C19574 /* AdminLogo.png */,
 				E431FA581F75C26200C19574 /* ViewControllerForShippingInfo.swift */,
+				E42D303F1FC2803E0085EC02 /* VideoCell.swift */,
 				E42D303B1FC2174E0085EC02 /* ViewControllerForAdminPanel.swift */,
 				E42D303D1FC21BBC0085EC02 /* Capital.swift */,
 				E431FA501F74B55000C19574 /* BlueCircleOutline.png */,
+				E455E29B1FC34FEE00C8A204 /* reloadbutton.png */,
 			);
 			path = StudentsWhoCareApp;
 			sourceTree = "<group>";
@@ -323,6 +329,7 @@
 				E401092A1F71C9980054E9E6 /* LaunchScreen.storyboard in Resources */,
 				E401094E1F71CB6A0054E9E6 /* FadingBlueBack.jpeg in Resources */,
 				E431FA511F74B55000C19574 /* BlueCircleOutline.png in Resources */,
+				E455E29C1FC34FEF00C8A204 /* reloadbutton.png in Resources */,
 				E40109271F71C9980054E9E6 /* Assets.xcassets in Resources */,
 				E431FA4B1F74B01800C19574 /* T-Shirt.jpg in Resources */,
 				E431FA4D1F74B20C00C19574 /* CurvedBar.png in Resources */,
@@ -512,6 +519,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E49E47ED1FAE433E00A3B411 /* UIView.swift in Sources */,
+				E42D30401FC2803E0085EC02 /* VideoCell.swift in Sources */,
 				E42D303C1FC2174E0085EC02 /* ViewControllerForAdminPanel.swift in Sources */,
 				E42D303E1FC21BBC0085EC02 /* Capital.swift in Sources */,
 				E40109221F71C9980054E9E6 /* ViewController.swift in Sources */,

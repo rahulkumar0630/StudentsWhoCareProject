@@ -11,10 +11,11 @@ import Foundation
 import MapKit
 import UIKit
 
-class Capital: MKPointAnnotation {
+class Capital: NSObject {
     //    var title: String?
     //    var coordinate: CLLocationCoordinate2D
     
+    var name: String!
     var Address1: String!
     var Address2: String!
     var City:String!
@@ -24,10 +25,10 @@ class Capital: MKPointAnnotation {
     var State:String!
     var ZipCode:String!
     
-    init(Address1: String, Address2: String,City :String, Country:String, Date:String, PhoneNumber:String,
+    init(name: String, Address1: String, Address2: String,City :String, Country:String, Date:String, PhoneNumber:String,
          State:String, ZipCode:String) {
         super.init()
-        self.title = title
+        self.name = name
         self.Address1 = Address1
         self.Address2 = Address2
         self.City = City

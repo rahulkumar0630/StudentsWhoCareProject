@@ -11,18 +11,54 @@ import MapKit
 import FirebaseCore
 import FirebaseDatabase
 
-class ViewControllerForAdminPanel: UIViewController, UITextFieldDelegate{
-    @IBOutlet var MapForAdmin: MKMapView!
+class ViewControllerForAdminPanel: UITableViewController, UITextFieldDelegate{
+
     static var ref: DatabaseReference!
+    var refhandle: UInt!
     let StoringPin = Database.database().reference()
-    let locationManager = CLLocationManager()
-    var currentLoc:CLLocationCoordinate2D?
-    var centerMap = true
+    let cellid = "cellid"
+    
+    var items: [Capital] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        retrieveData()
+
+    }
+    @IBAction func ReloadData(_ sender: Any) {
+       items = []
+       tableView.reloadData()
+       retrieveData()
+    }
+    
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return items.count
+    }
+    
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = UITableViewCell(style: .subtitle, reuseIdentifier: cellid)
+        cell.textLabel?.text = items[indexPath.row].name
+        return cell
+    }
+    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        return true
+    }
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         
+        if editingStyle == .delete
+        {
+            items.remove(at: indexPath.row)
+            tableView.beginUpdates()
+            tableView.deleteRows(at: [indexPath], with: .automatic)
+            tableView.endUpdates()
+        }
+    }
+    
+    
+    func retrieveData()
+    {
         StoringPin.observe(.value, with: {
+            
             snapshot in
             if snapshot.value is NSNull {
                 return
@@ -32,6 +68,7 @@ class ViewControllerForAdminPanel: UIViewController, UITextFieldDelegate{
             
             for key in val.keys {
                 //print(++self.increment)
+                let name = val[key]!["Name"] as! String
                 let Address1 = val[key]!["Address1"] as! String
                 let Address2 = val[key]!["Address2"] as! String
                 let City = val[key]!["City"] as! String
@@ -40,29 +77,13 @@ class ViewControllerForAdminPanel: UIViewController, UITextFieldDelegate{
                 let PhoneNumber = val[key]!["PhoneNumber"] as! String
                 let State = val[key]!["State"] as! String
                 let ZipCode = val[key]!["ZipCode"] as! String
-               
-                print(Address1)
                 
+                let capital = Capital(name: name, Address1: Address1, Address2: Address2, City: City, Country: Country, Date: Date, PhoneNumber: PhoneNumber, State: State, ZipCode: ZipCode)
                 
-                let Address = "\(Address1),\(City),\(State), \(ZipCode)"
+                self.items.append(capital)
                 
-                let artwork = Capital(Address1: Address, Address2: Address2, City: City,
-                                      Country: Country, Date: Date, PhoneNumber: PhoneNumber,
-                                      State: State, ZipCode: ZipCode);
-                
-                artwork.subtitle = Date
-                
-                
-                Arrayforpins.append(artwork)
-                
-                self.MapForAdmin.addAnnotation(Arrayforpins[Arrayforpins.count - 1])
-    
-                
-                for Capital in Arrayforpins {
-                    
-                    self.MapForAdmin.addAnnotation(Capital)
-                    
-                    
+                DispatchQueue.main.async {
+                    self.tableView.reloadData()
                 }
                 
                 
@@ -70,81 +91,17 @@ class ViewControllerForAdminPanel: UIViewController, UITextFieldDelegate{
             
             
         })
-        self.locationManager.requestAlwaysAuthorization()
-        self.locationManager.requestWhenInUseAuthorization()
-        
-        if CLLocationManager.locationServicesEnabled() {
-            
-            locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
-            locationManager.startUpdatingLocation()
-            
-        }
-        
-        
-        let annotationView = MKAnnotationView()
-        let detailButton: UIButton = UIButton.init(type: .detailDisclosure) as UIButton
-        annotationView.rightCalloutAccessoryView = detailButton
-        
         
     }
-    let regionRadius: CLLocationDistance = 1000
+    
+    
 
-    func centerMapOnLocation(_ location: CLLocation) {
-        
-        let coordinateRegion = MKCoordinateRegionMakeWithDistance(location.coordinate,regionRadius * 2.0, regionRadius * 2.0)
-        MapForAdmin.setRegion(coordinateRegion, animated: true)
-        
-    }
-    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        
-        let locValue:CLLocationCoordinate2D = manager.location!.coordinate
-        
-        if CLLocationManager.authorizationStatus() == .authorizedWhenInUse {
-            MapForAdmin.showsUserLocation = true
-        } else {
-            locationManager.requestWhenInUseAuthorization()
-        }
-        
-        //print("update")
-        
-        currentLoc = locValue
-        
-        if centerMap {
-            centerMap = false
-            centerMapOnLocation(CLLocation(latitude: currentLoc!.latitude, longitude: currentLoc!.longitude))
-        }
-        
-    }
-    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
-        
-        let identifier = "Capital"
-        //print(++increment)
-        
-        if annotation.isKind(of: Capital.self) {
-            
-            // print("CAPITAL")
-            if let annotationView = mapView.dequeueReusableAnnotationView(withIdentifier: identifier) {
-                annotationView.annotation = annotation
-                return annotationView
-                
-            } else {
-                
-                let annotationView = MKPinAnnotationView(annotation:annotation, reuseIdentifier:identifier)
-                annotationView.isEnabled = true
-                annotationView.canShowCallout = true
-                //annotationView.pinColor = MKPinAnnotationColor.Green
-                let btn = UIButton(type: .detailDisclosure)//                btn.addTarget(self, action: #selector(pressed), forControlEvents: .TouchUpInside)
-                annotationView.rightCalloutAccessoryView = btn
-                return annotationView
-                
-            }
-        }
-        
-        return nil
-    }
+  
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
 }
+
+
 
