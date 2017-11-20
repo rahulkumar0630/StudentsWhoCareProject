@@ -19,14 +19,17 @@ class ViewControllerForAdminPanel: UITableViewController, UITextFieldDelegate{
     let cellid = "cellid"
     
     var items: [Capital] = []
+    var keynames: [String] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
         retrieveData()
 
     }
     @IBAction func ReloadData(_ sender: Any) {
        items = []
+       keynames = []
        tableView.reloadData()
        retrieveData()
     }
@@ -51,6 +54,24 @@ class ViewControllerForAdminPanel: UITableViewController, UITextFieldDelegate{
             tableView.beginUpdates()
             tableView.deleteRows(at: [indexPath], with: .automatic)
             tableView.endUpdates()
+
+            
+            StoringPin.child(keynames[indexPath.row]).removeValue(completionBlock:)({ (err, ref) in
+                if err != nil {
+                    print(err)
+                } else {
+                    print(ref)
+                    print("Removed")
+                    self.items = []
+                    self.keynames = []
+                    tableView.reloadData()
+                    self.retrieveData()
+                }
+            })
+            
+
+            
+            
         }
     }
     
@@ -77,7 +98,8 @@ class ViewControllerForAdminPanel: UITableViewController, UITextFieldDelegate{
                 let PhoneNumber = val[key]!["PhoneNumber"] as! String
                 let State = val[key]!["State"] as! String
                 let ZipCode = val[key]!["ZipCode"] as! String
-                
+
+                self.keynames.append(key)
                 let capital = Capital(name: name, Address1: Address1, Address2: Address2, City: City, Country: Country, Date: Date, PhoneNumber: PhoneNumber, State: State, ZipCode: ZipCode)
                 
                 self.items.append(capital)
