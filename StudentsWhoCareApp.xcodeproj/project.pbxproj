@@ -31,6 +31,7 @@
 		E431FA571F75B98E00C19574 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E431FA541F75B8D300C19574 /* GoogleService-Info.plist */; };
 		E431FA591F75C26200C19574 /* ViewControllerForShippingInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = E431FA581F75C26200C19574 /* ViewControllerForShippingInfo.swift */; };
 		E455E29C1FC34FEF00C8A204 /* reloadbutton.png in Resources */ = {isa = PBXBuildFile; fileRef = E455E29B1FC34FEE00C8A204 /* reloadbutton.png */; };
+		E49BBB191FC48C9800149651 /* ViewControllerForInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = E49BBB181FC48C9800149651 /* ViewControllerForInfo.swift */; };
 		E49E47ED1FAE433E00A3B411 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E49E47EC1FAE433E00A3B411 /* UIView.swift */; };
 /* End PBXBuildFile section */
 
@@ -84,6 +85,7 @@
 		E431FA541F75B8D300C19574 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		E431FA581F75C26200C19574 /* ViewControllerForShippingInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerForShippingInfo.swift; sourceTree = "<group>"; };
 		E455E29B1FC34FEE00C8A204 /* reloadbutton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = reloadbutton.png; path = ../../../../../Downloads/reloadbutton.png; sourceTree = "<group>"; };
+		E49BBB181FC48C9800149651 /* ViewControllerForInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerForInfo.swift; sourceTree = "<group>"; };
 		E49E47EC1FAE433E00A3B411 /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 		E80A3644AB15AC53DB08B04E /* Pods-StudentsWhoCareApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StudentsWhoCareApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-StudentsWhoCareApp/Pods-StudentsWhoCareApp.release.xcconfig"; sourceTree = "<group>"; };
 		F44F828AC91B6AB1F5804C44 /* Pods_StudentsWhoCareAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StudentsWhoCareAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -171,6 +173,7 @@
 				E431FA581F75C26200C19574 /* ViewControllerForShippingInfo.swift */,
 				E42D303F1FC2803E0085EC02 /* VideoCell.swift */,
 				E42D303B1FC2174E0085EC02 /* ViewControllerForAdminPanel.swift */,
+				E49BBB181FC48C9800149651 /* ViewControllerForInfo.swift */,
 				E42D303D1FC21BBC0085EC02 /* Capital.swift */,
 				E431FA501F74B55000C19574 /* BlueCircleOutline.png */,
 				E455E29B1FC34FEE00C8A204 /* reloadbutton.png */,
@@ -518,6 +521,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E49BBB191FC48C9800149651 /* ViewControllerForInfo.swift in Sources */,
 				E49E47ED1FAE433E00A3B411 /* UIView.swift in Sources */,
 				E42D30401FC2803E0085EC02 /* VideoCell.swift in Sources */,
 				E42D303C1FC2174E0085EC02 /* ViewControllerForAdminPanel.swift in Sources */,

@@ -41,6 +41,7 @@ class ViewControllerForAdminPanel: UITableViewController, UITextFieldDelegate{
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell(style: .subtitle, reuseIdentifier: cellid)
         cell.textLabel?.text = items[indexPath.row].name
+        cell.accessoryType = .disclosureIndicator
         return cell
     }
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
@@ -68,6 +69,8 @@ class ViewControllerForAdminPanel: UITableViewController, UITextFieldDelegate{
                     self.retrieveData()
                 }
             })
+            
+            
             
 
             
@@ -114,6 +117,11 @@ class ViewControllerForAdminPanel: UITableViewController, UITextFieldDelegate{
             
         })
         
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        ViewControllerForInfo.DataRetrival(Data: items[indexPath.row])
+        performSegue(withIdentifier: "SegueToInfo", sender: self)
     }
     
     
