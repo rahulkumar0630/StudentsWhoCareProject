@@ -96,6 +96,8 @@ class ViewControllerForUsers: UITableViewController, UITextFieldDelegate{
             }
             let val = snapshot.value as! [String : [String : AnyObject]]
             
+            self.items = []
+            self.keynames = []
             
             for key in val.keys {
                 //print(++self.increment)
@@ -108,7 +110,7 @@ class ViewControllerForUsers: UITableViewController, UITextFieldDelegate{
                 let PhoneNumber = val[key]!["PhoneNumber"] as! String
                 let State = val[key]!["State"] as! String
                 let ZipCode = val[key]!["ZipCode"] as! String
-                let Address1Stored = UserDefaults.standard.object(forKey: "Address 1:") as! String
+                let Address1Stored = UserDefaults.standard.object(forKey: "Address 1:") as? String
                 
                 if(Address1Stored == Address1)
                 {

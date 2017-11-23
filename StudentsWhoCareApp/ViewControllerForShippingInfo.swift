@@ -31,6 +31,8 @@ class ViewControllerForShippingInfo: UIViewController, UITextFieldDelegate{
     static var PhoneNumberText = ""
     static var CountryText = ""
     static var StateText = ""
+    let modelName = UIDevice.current.modelName
+
     
     override func viewDidLayoutSubviews() {
         //        if(ViewController.modelName == "iPhone 5" || ViewController.modelName == "iPhone 5c"
@@ -78,6 +80,13 @@ class ViewControllerForShippingInfo: UIViewController, UITextFieldDelegate{
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        if(modelName == "iPhone 5" || modelName == "iPhone 5c"
+            || modelName == "iPhone 5s" || modelName == "iPhone SE" || modelName == "Simulator")
+        {
+            hideNavigationBar()
+        }
+
+
         ContinueButton.layer.cornerRadius = 10
         
         //registerForKeyboardNotifications()
@@ -281,6 +290,10 @@ class ViewControllerForShippingInfo: UIViewController, UITextFieldDelegate{
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        showNavigationBar()
     }
     
     

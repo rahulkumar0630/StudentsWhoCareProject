@@ -33,6 +33,8 @@
 		E455E29C1FC34FEF00C8A204 /* reloadbutton.png in Resources */ = {isa = PBXBuildFile; fileRef = E455E29B1FC34FEE00C8A204 /* reloadbutton.png */; };
 		E49BBB191FC48C9800149651 /* ViewControllerForInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = E49BBB181FC48C9800149651 /* ViewControllerForInfo.swift */; };
 		E49BBB1B1FC5EEC200149651 /* ViewControllerForUsers.swift in Sources */ = {isa = PBXBuildFile; fileRef = E49BBB1A1FC5EEC200149651 /* ViewControllerForUsers.swift */; };
+		E49BBB1D1FC7532D00149651 /* UIDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = E49BBB1C1FC7532D00149651 /* UIDevice.swift */; };
+		E49BBB1F1FC778D700149651 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E49BBB1E1FC778D700149651 /* UIViewController.swift */; };
 		E49E47ED1FAE433E00A3B411 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E49E47EC1FAE433E00A3B411 /* UIView.swift */; };
 /* End PBXBuildFile section */
 
@@ -88,6 +90,8 @@
 		E455E29B1FC34FEE00C8A204 /* reloadbutton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = reloadbutton.png; path = ../../../../../Downloads/reloadbutton.png; sourceTree = "<group>"; };
 		E49BBB181FC48C9800149651 /* ViewControllerForInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerForInfo.swift; sourceTree = "<group>"; };
 		E49BBB1A1FC5EEC200149651 /* ViewControllerForUsers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerForUsers.swift; sourceTree = "<group>"; };
+		E49BBB1C1FC7532D00149651 /* UIDevice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIDevice.swift; sourceTree = "<group>"; };
+		E49BBB1E1FC778D700149651 /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
 		E49E47EC1FAE433E00A3B411 /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 		E80A3644AB15AC53DB08B04E /* Pods-StudentsWhoCareApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StudentsWhoCareApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-StudentsWhoCareApp/Pods-StudentsWhoCareApp.release.xcconfig"; sourceTree = "<group>"; };
 		F44F828AC91B6AB1F5804C44 /* Pods_StudentsWhoCareAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StudentsWhoCareAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -137,6 +141,7 @@
 		E40109131F71C9980054E9E6 = {
 			isa = PBXGroup;
 			children = (
+				E49BBB1C1FC7532D00149651 /* UIDevice.swift */,
 				E401091E1F71C9980054E9E6 /* StudentsWhoCareApp */,
 				E40109331F71C9980054E9E6 /* StudentsWhoCareAppTests */,
 				E401093E1F71C9980054E9E6 /* StudentsWhoCareAppUITests */,
@@ -177,6 +182,7 @@
 				E42D303B1FC2174E0085EC02 /* ViewControllerForAdminPanel.swift */,
 				E49BBB1A1FC5EEC200149651 /* ViewControllerForUsers.swift */,
 				E49BBB181FC48C9800149651 /* ViewControllerForInfo.swift */,
+				E49BBB1E1FC778D700149651 /* UIViewController.swift */,
 				E42D303D1FC21BBC0085EC02 /* Capital.swift */,
 				E431FA501F74B55000C19574 /* BlueCircleOutline.png */,
 				E455E29B1FC34FEE00C8A204 /* reloadbutton.png */,
@@ -527,8 +533,10 @@
 				E49BBB191FC48C9800149651 /* ViewControllerForInfo.swift in Sources */,
 				E49E47ED1FAE433E00A3B411 /* UIView.swift in Sources */,
 				E42D30401FC2803E0085EC02 /* VideoCell.swift in Sources */,
+				E49BBB1F1FC778D700149651 /* UIViewController.swift in Sources */,
 				E42D303C1FC2174E0085EC02 /* ViewControllerForAdminPanel.swift in Sources */,
 				E42D303E1FC21BBC0085EC02 /* Capital.swift in Sources */,
+				E49BBB1D1FC7532D00149651 /* UIDevice.swift in Sources */,
 				E40109221F71C9980054E9E6 /* ViewController.swift in Sources */,
 				E49BBB1B1FC5EEC200149651 /* ViewControllerForUsers.swift in Sources */,
 				E40109201F71C9980054E9E6 /* AppDelegate.swift in Sources */,

@@ -21,7 +21,7 @@ class ViewControllerForInfo: UIViewController {
     
     @IBOutlet var StateLabel: UILabel!
     @IBOutlet var ZipCodeLabel: UILabel!
-    @IBOutlet var GetDirectionsButton: UIButton!
+    
     
     static var name = ""
     static var address1 = ""
@@ -32,13 +32,28 @@ class ViewControllerForInfo: UIViewController {
     static var phonenumber = ""
     static var state = ""
     static var zipcode = ""
+    let modelName = UIDevice.current.modelName
     
+    @IBOutlet var PhoneNumberTitleLabel: UILabel!
+    
+    @IBOutlet var PhoneNumberForIphone5: UIBarButtonItem!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        PhoneNumberForIphone5.title = ""
         NameLabel.text = ViewControllerForInfo.name
         Address1Label.text = ViewControllerForInfo.address1
+        
+        
+        if(modelName == "iPhone 5" || modelName == "iPhone 5c"
+            || modelName == "iPhone 5s" || modelName == "iPhone SE" || modelName == "Simulator")
+        {
+            PhoneNumberTitleLabel.isHidden = true
+            PhoneNumberLabel.isHidden = true
+            PhoneNumberForIphone5.title = ViewControllerForInfo.phonenumber
+        }
+        
         
         if(ViewControllerForInfo.address2 != "")
         {
@@ -61,7 +76,7 @@ class ViewControllerForInfo: UIViewController {
         }
         StateLabel.text = ViewControllerForInfo.state
         ZipCodeLabel.text = ViewControllerForInfo.zipcode
-        GetDirectionsButton.layer.cornerRadius = 10
+    
         
     }
     

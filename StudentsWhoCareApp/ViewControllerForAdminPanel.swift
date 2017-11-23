@@ -45,6 +45,7 @@ class ViewControllerForAdminPanel: UITableViewController, UITextFieldDelegate{
         return cell
     }
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        
         return true
     }
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
@@ -63,8 +64,8 @@ class ViewControllerForAdminPanel: UITableViewController, UITextFieldDelegate{
                 } else {
                     print(ref)
                     print("Removed")
-                    self.items = []
-                    self.keynames = []
+                    self.items.removeAll()
+                    self.keynames.removeAll()
                     tableView.reloadData()
                     self.retrieveData()
                 }
@@ -81,6 +82,8 @@ class ViewControllerForAdminPanel: UITableViewController, UITextFieldDelegate{
     
     func retrieveData()
     {
+        
+        
         StoringPin.observe(.value, with: {
             
             snapshot in
@@ -88,6 +91,9 @@ class ViewControllerForAdminPanel: UITableViewController, UITextFieldDelegate{
                 return
             }
             let val = snapshot.value as! [String : [String : AnyObject]]
+            
+            self.items = []
+            self.keynames = []
             
             
             for key in val.keys {
@@ -109,6 +115,7 @@ class ViewControllerForAdminPanel: UITableViewController, UITextFieldDelegate{
                 
                 DispatchQueue.main.async {
                     self.tableView.reloadData()
+
                 }
                 
                 
