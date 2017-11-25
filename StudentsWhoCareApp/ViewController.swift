@@ -18,12 +18,15 @@ class ViewController: UIViewController {
     static var universalDate: UIDatePicker!
     @IBOutlet var ToolBar: UIToolbar!
     
+    static var isIpad = false
+    static let modelName = UIDevice.current.modelName
+
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         SchedulePickup.layer.cornerRadius = 10
         SchedulePickup.layer.borderWidth = 4
         SchedulePickup.layer.borderColor = UIColor.orange.cgColor
-        
         
 
         

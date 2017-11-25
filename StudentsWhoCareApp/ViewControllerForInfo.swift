@@ -47,7 +47,7 @@ class ViewControllerForInfo: UIViewController {
         
         
         if(modelName == "iPhone 5" || modelName == "iPhone 5c"
-            || modelName == "iPhone 5s" || modelName == "iPhone SE" || modelName == "Simulator")
+            || modelName == "iPhone 5s" || modelName == "iPhone SE")
         {
             PhoneNumberTitleLabel.isHidden = true
             PhoneNumberLabel.isHidden = true

@@ -81,7 +81,7 @@ class ViewControllerForShippingInfo: UIViewController, UITextFieldDelegate{
     override func viewDidLoad() {
         super.viewDidLoad()
         if(modelName == "iPhone 5" || modelName == "iPhone 5c"
-            || modelName == "iPhone 5s" || modelName == "iPhone SE" || modelName == "Simulator")
+            || modelName == "iPhone 5s" || modelName == "iPhone SE")
         {
             hideNavigationBar()
         }
@@ -167,7 +167,7 @@ class ViewControllerForShippingInfo: UIViewController, UITextFieldDelegate{
         let ThanksController = UIAlertController(title: "Thanks!", message: "Your Pick-Up has been recorded", preferredStyle: UIAlertControllerStyle.alert)
         let cancelAction = UIAlertAction(title: "Ok", style: .cancel) { (action) in
             ThanksController.dismiss(animated: false, completion: nil)
-            self.navigationController?.popToRootViewController(animated: true)
+            self.navigationController?.popViewController(animated: true)
 
         }
         ThanksController.addAction(cancelAction)

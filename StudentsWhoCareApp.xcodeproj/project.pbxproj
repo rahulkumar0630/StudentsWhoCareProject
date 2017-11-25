@@ -35,7 +35,12 @@
 		E49BBB1B1FC5EEC200149651 /* ViewControllerForUsers.swift in Sources */ = {isa = PBXBuildFile; fileRef = E49BBB1A1FC5EEC200149651 /* ViewControllerForUsers.swift */; };
 		E49BBB1D1FC7532D00149651 /* UIDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = E49BBB1C1FC7532D00149651 /* UIDevice.swift */; };
 		E49BBB1F1FC778D700149651 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E49BBB1E1FC778D700149651 /* UIViewController.swift */; };
+		E49BBB211FC8972900149651 /* Screen Shot 2017-11-24 at 12.05.23 PM.png in Resources */ = {isa = PBXBuildFile; fileRef = E49BBB201FC8972800149651 /* Screen Shot 2017-11-24 at 12.05.23 PM.png */; };
 		E49E47ED1FAE433E00A3B411 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E49E47EC1FAE433E00A3B411 /* UIView.swift */; };
+		E4D894731FC8D89100642084 /* 1b089750da14082382ccdd48a6166026.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E4D894721FC8D89000642084 /* 1b089750da14082382ccdd48a6166026.jpg */; };
+		E4D894751FC8D97F00642084 /* Picture6.png in Resources */ = {isa = PBXBuildFile; fileRef = E4D894741FC8D97E00642084 /* Picture6.png */; };
+		E4D894771FC8D9FB00642084 /* new logo.PNG in Resources */ = {isa = PBXBuildFile; fileRef = E4D894761FC8D9FB00642084 /* new logo.PNG */; };
+		E4D894791FC8E16000642084 /* ViewControllerForStartUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4D894781FC8E16000642084 /* ViewControllerForStartUp.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -92,7 +97,12 @@
 		E49BBB1A1FC5EEC200149651 /* ViewControllerForUsers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerForUsers.swift; sourceTree = "<group>"; };
 		E49BBB1C1FC7532D00149651 /* UIDevice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIDevice.swift; sourceTree = "<group>"; };
 		E49BBB1E1FC778D700149651 /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
+		E49BBB201FC8972800149651 /* Screen Shot 2017-11-24 at 12.05.23 PM.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Screen Shot 2017-11-24 at 12.05.23 PM.png"; path = "../../../../Screen Shot 2017-11-24 at 12.05.23 PM.png"; sourceTree = "<group>"; };
 		E49E47EC1FAE433E00A3B411 /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
+		E4D894721FC8D89000642084 /* 1b089750da14082382ccdd48a6166026.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = 1b089750da14082382ccdd48a6166026.jpg; path = "../../../../../Downloads/SWC Images/1b089750da14082382ccdd48a6166026.jpg"; sourceTree = "<group>"; };
+		E4D894741FC8D97E00642084 /* Picture6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Picture6.png; path = ../../../../../Downloads/Picture6.png; sourceTree = "<group>"; };
+		E4D894761FC8D9FB00642084 /* new logo.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "new logo.PNG"; path = "../../../../../Downloads/new logo.PNG"; sourceTree = "<group>"; };
+		E4D894781FC8E16000642084 /* ViewControllerForStartUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerForStartUp.swift; sourceTree = "<group>"; };
 		E80A3644AB15AC53DB08B04E /* Pods-StudentsWhoCareApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StudentsWhoCareApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-StudentsWhoCareApp/Pods-StudentsWhoCareApp.release.xcconfig"; sourceTree = "<group>"; };
 		F44F828AC91B6AB1F5804C44 /* Pods_StudentsWhoCareAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StudentsWhoCareAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -166,6 +176,7 @@
 			children = (
 				E401091F1F71C9980054E9E6 /* AppDelegate.swift */,
 				E40109211F71C9980054E9E6 /* ViewController.swift */,
+				E4D894781FC8E16000642084 /* ViewControllerForStartUp.swift */,
 				E49E47EC1FAE433E00A3B411 /* UIView.swift */,
 				E40109231F71C9980054E9E6 /* Main.storyboard */,
 				E40109261F71C9980054E9E6 /* Assets.xcassets */,
@@ -173,13 +184,17 @@
 				E401092B1F71C9980054E9E6 /* Info.plist */,
 				E431FA541F75B8D300C19574 /* GoogleService-Info.plist */,
 				E401094D1F71CB6A0054E9E6 /* FadingBlueBack.jpeg */,
+				E4D894741FC8D97E00642084 /* Picture6.png */,
 				E431FA481F74AF9200C19574 /* BlueCircle.png */,
 				E431FA4C1F74B20C00C19574 /* CurvedBar.png */,
 				E431FA4A1F74B01800C19574 /* T-Shirt.jpg */,
+				E49BBB201FC8972800149651 /* Screen Shot 2017-11-24 at 12.05.23 PM.png */,
 				E431FA521F74B69900C19574 /* AdminLogo.png */,
 				E431FA581F75C26200C19574 /* ViewControllerForShippingInfo.swift */,
 				E42D303F1FC2803E0085EC02 /* VideoCell.swift */,
 				E42D303B1FC2174E0085EC02 /* ViewControllerForAdminPanel.swift */,
+				E4D894721FC8D89000642084 /* 1b089750da14082382ccdd48a6166026.jpg */,
+				E4D894761FC8D9FB00642084 /* new logo.PNG */,
 				E49BBB1A1FC5EEC200149651 /* ViewControllerForUsers.swift */,
 				E49BBB181FC48C9800149651 /* ViewControllerForInfo.swift */,
 				E49BBB1E1FC778D700149651 /* UIViewController.swift */,
@@ -338,15 +353,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				E431FA531F74B69900C19574 /* AdminLogo.png in Resources */,
+				E49BBB211FC8972900149651 /* Screen Shot 2017-11-24 at 12.05.23 PM.png in Resources */,
 				E401092A1F71C9980054E9E6 /* LaunchScreen.storyboard in Resources */,
 				E401094E1F71CB6A0054E9E6 /* FadingBlueBack.jpeg in Resources */,
 				E431FA511F74B55000C19574 /* BlueCircleOutline.png in Resources */,
 				E455E29C1FC34FEF00C8A204 /* reloadbutton.png in Resources */,
 				E40109271F71C9980054E9E6 /* Assets.xcassets in Resources */,
+				E4D894751FC8D97F00642084 /* Picture6.png in Resources */,
 				E431FA4B1F74B01800C19574 /* T-Shirt.jpg in Resources */,
+				E4D894771FC8D9FB00642084 /* new logo.PNG in Resources */,
 				E431FA4D1F74B20C00C19574 /* CurvedBar.png in Resources */,
 				E431FA551F75B8D300C19574 /* GoogleService-Info.plist in Resources */,
 				E431FA491F74AF9200C19574 /* BlueCircle.png in Resources */,
+				E4D894731FC8D89100642084 /* 1b089750da14082382ccdd48a6166026.jpg in Resources */,
 				E40109251F71C9980054E9E6 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -540,6 +559,7 @@
 				E40109221F71C9980054E9E6 /* ViewController.swift in Sources */,
 				E49BBB1B1FC5EEC200149651 /* ViewControllerForUsers.swift in Sources */,
 				E40109201F71C9980054E9E6 /* AppDelegate.swift in Sources */,
+				E4D894791FC8E16000642084 /* ViewControllerForStartUp.swift in Sources */,
 				E431FA591F75C26200C19574 /* ViewControllerForShippingInfo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -699,6 +719,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.RahulKumar.StudentsWhoCareApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -713,6 +734,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.RahulKumar.StudentsWhoCareApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
